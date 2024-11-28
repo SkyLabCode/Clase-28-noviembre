@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="numero">
+    <button type="button" id="comprobar">Comprobar</button>
+    <p id="resultado"></p>
+
+    <script>
+        /*
+        Crea una función que determine si un numero
+        pasado por parámetro es par o impar
+        */
+
+        const input = document.getElementById('numero');
+        const button = document.getElementById('comprobar');
+
+        button.onclick = () => {
+            const num = Number(input.value); 
+            const res = determinarParImpar(num);
+            document.getElementById('resultado').innerHTML = res;
+        }
+
+        function determinarParImpar(numero){
+            if(numero % 2 == 0){
+                return 'Par';
+            }else{
+                return 'Impar';
+            }
+        }
+
+        console.log(determinarParImpar(123));
+        console.log(determinarParImpar(30));
+        console.log(determinarParImpar(6789));
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
